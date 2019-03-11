@@ -37,21 +37,19 @@ before_script:
 
 script: 'ci/travis.rb'
 
-env:
-  global:
-    - "JRUBY_OPTS='--dev -J-Xmx1024M'"
-  matrix:
-    - "GEM=railties"
-    - "GEM=actionpack,actioncable"
-    - "GEM=actionmailer,activemodel,activesupport,actionview,activejob,activestorage,actionmailbox,actiontext"
-    - "GEM=activesupport PRESERVE_TIMEZONES=1"
-    - "GEM=activerecord:sqlite3"
-    - "GEM=activerecord:postgresql"
-    - "GEM=activerecord:mysql2"
-    - "GEM=guides"
-    - "GEM=actioncable:integration"
+#env:
+#  global:
+#    - "JRUBY_OPTS='--dev -J-Xmx1024M'"
+#  matrix:
+#    - "GEM=railties"
+#    - "GEM=actionpack,actioncable"
+#    - "GEM=actionmailer,activemodel,activesupport,actionview,activejob,activestorage,actionmailbox,actiontext"
+#    - "GEM=activesupport PRESERVE_TIMEZONES=1"
+#    - "GEM=activerecord:sqlite3"
+#    - "GEM=activerecord:postgresql"
+#    - "GEM=activerecord:mysql2"
+#    - "GEM=guides"
+#    - "GEM=actioncable:integration"
 
 rvm:
   - 2.5.3
-  - 2.6.0
-  - ruby-head

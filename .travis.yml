@@ -14,6 +14,7 @@ services:
 
 bundler_args: --jobs 3 --retry 3
 before_install:
+  - "docker build -t damianszymanski/ddd ."
   - "rm ${BUNDLE_GEMFILE}.lock"
   - "travis_retry gem update --system"
   - "travis_retry gem install bundler"
@@ -25,7 +26,6 @@ before_install:
   - "[[ $GEM != 'railties' ]] || (curl -o- -L https://yarnpkg.com/install.sh | bash)"
   - "[[ $GEM != 'railties' ]] || export PATH=$HOME/.yarn/bin:$PATH"
   - "[[ $GEM != 'activerecord:postgresql' ]] || sudo mount -o remount,size=50% /var/ramfs"
-  - "docker build -t damianszymanski/ddd ."
 
 before_script:
   # Set Sauce Labs username and access key. Obfuscated, purposefully not encrypted.

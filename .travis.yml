@@ -27,7 +27,7 @@ before_install:
   - "[[ $GEM != 'railties' ]] || export PATH=$HOME/.yarn/bin:$PATH"
   - "[[ $GEM != 'activerecord:postgresql' ]] || sudo mount -o remount,size=50% /var/ramfs"
 
-before_script:
+    #before_script:
   # Set Sauce Labs username and access key. Obfuscated, purposefully not encrypted.
   # Decodes to e.g. `export VARIABLE=VALUE`
   #- $(base64 --decode <<< "ZXhwb3J0IFNBVUNFX0FDQ0VTU19LRVk9YTAzNTM0M2YtZTkyMi00MGIzLWFhM2MtMDZiM2VhNjM1YzQ4")
@@ -35,7 +35,7 @@ before_script:
   #- "[[ $GEM != 'railties' ]] || (cd actionview && yarn build)"
   #- "[[ $GEM != 'railties' ]] || (cd railties/test/isolation/assets && yarn install)"
 
-script: 'ci/travis.rb'
+    #script: 'ci/travis.rb'
 
 #env:
 #  global:

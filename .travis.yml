@@ -27,6 +27,10 @@ before_install:
   - "[[ $GEM != 'railties' ]] || export PATH=$HOME/.yarn/bin:$PATH"
   - "[[ $GEM != 'activerecord:postgresql' ]] || sudo mount -o remount,size=50% /var/ramfs"
 
+jobs:
+  include:
+    - stage: deploy
+      script: echo Deploy
     #before_script:
   # Set Sauce Labs username and access key. Obfuscated, purposefully not encrypted.
   # Decodes to e.g. `export VARIABLE=VALUE`

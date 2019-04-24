@@ -55,4 +55,4 @@ jobs:
 #    - "GEM=actioncable:integration"
 
 rvm:
-  - 2.5.3
+  - 2.6.0
